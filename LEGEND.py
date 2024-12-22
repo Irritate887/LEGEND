@@ -343,8 +343,7 @@ async def start(update: Update, context: CallbackContext):
     user_id = update.effective_user.id 
 
     # Check if the user is allowed to use the bot
-    if not await is_user_allowed(user_id):
-        await context.bot.send_message(chat_id=chat_id, text="*❌ You are not authorized to use this bot!*", parse_mode='Markdown')
+    is_user_allowed(user_id): context.bot.send_message(chat_id=chat_id, text="*❌ You are not authorized to use this bot!*", parse_mode='Markdown')
         return
 
     message = (
@@ -1016,8 +1015,8 @@ async def is_user_allowed(user_id):
         expiry_date = user['expiry_date']
         if expiry_date:
             if expiry_date.tzinfo is None:
-                expiry_date = expiry_date.replace(tzinfo=timezone.utc)  # Ensure timezone awareness
-            if expiry_date > datetime.now(timezone.utc):
+                expiry_date = expiry_date.replace(tzinfo=timezone.utc)  # Ensure timezone awarenes                                              
+                
                 return True
     return False
 
