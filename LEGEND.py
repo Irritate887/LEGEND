@@ -8,7 +8,7 @@ import string
 from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext, filters, MessageHandler
 from pymongo import MongoClient
-from datetime import datetime, timedelta, timezone
+from datetime import datetime
 
 # Database Configuration
 MONGO_URI = 'mongodb+srv://Magic:Spike@cluster0.fa68l.mongodb.net/TEST?retryWrites=true&w=majority&appName=Cluster0'
@@ -38,9 +38,7 @@ DEFAULT_MAX_ATTACK_TIME = 100
 valid_ip_prefixes = ('52.', '20.', '14.', '4.', '13.')
 
 # Adjust this to your local timezone, e.g., 'America/New_York' or 'Asia/Kolkata'
-LOCAL_TIMEZONE = timezone("Asia/Kolkata")
 PROTECTED_FILES = ["LEGEND.py", "LEGEND"]
-BLOCKED_COMMANDS = ['nano', 'vim', 'shutdown', 'reboot', 'rm', 'mv', 'dd']
 
 # Fetch the current user and hostname dynamically
 USER_NAME = os.getlogin()  # Get the current system user
