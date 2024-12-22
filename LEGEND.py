@@ -24,7 +24,6 @@ TELEGRAM_BOT_TOKEN = '7563952518:AAHlX0T5IJ0AtoFIye3L_Kvtp7c9oaenM8U'
 ADMIN_USER_ID = 7303380062 
 ADMIN_USER_ID = 5135246308 
 ADMIN_USER_ID = 5317827318 
-COOLDOWN_PERIOD = timedelta(minutes=1) 
 user_last_attack_time = {} 
 user_attack_history = {}
 cooldown_dict = {}
